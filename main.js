@@ -1,3 +1,4 @@
+<script>
 function Palindrome()
 {
     var num = window.prompt("Enter 3 Digit Integer:");
@@ -8,16 +9,19 @@ function Palindrome()
      var num = window.prompt("Enter 3 Digit Integer:");
      num = parseInt(num);
     }
-}
 
-var mod4 = num % 10;
-num = Math.floor(num / 10);
+
 var mod3 = num % 10;
-numri = Math.floor(numri / 10);
-var shifra2 = numri % 10;
-var shifra1 = Math.floor(numri / 10);
+num = Math.floor(num / 10);
+var mod2 = num % 10;
+var mod1 = Math.floor(num / 10);
 
-if (shifra4 == shifra1 && shifra2 == shifra3)
-alert("Number palindrome");
+if (mod1 == mod3)
+alert("Number is a palindrome");
 else
 alert("Number not palindrome");
+}
+
+Palindrome()
+
+</script>

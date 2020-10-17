@@ -1,33 +1,23 @@
-<html>
-    <head>
-        <script>
-            function Palnum()
-            {
-                var rem, temp, final = 0;
-                var number = Number(document.getElementById("N").value);
+function Palindrome()
+{
+    var num = window.prompt("Enter 3 Digit Integer:");
+    num = parseInt(num);
+    while (num > 999 || num < 100)
+    {
+     alert("Please Enter a 3 Digit Integer!");
+     var num = window.prompt("Enter 3 Digit Integer:");
+     num = parseInt(num);
+    }
+}
 
-                temp = number;
-                while(number>0)
-                {
-                    rem = number%10;
-                    number = parseInt(number/10);
-                    final = final*10+rem;
-                }
-                if(final==temp and temp!=null)
-                {
-                    window.alert("number is Palindrome");
-                }
-                else
-                {
-                    window.alert("number is not palindrome");
-                }
-            }
-        </script>
-    </head>
-    <body>
-        <br>
-        <h1>Chec Whether a number is Palindrome or not</h1>
-        Enter The Number :<input type="text" name="n" id = "N"/>
-   <button onClick="Palnum()">submit</button>
-    </body>
-</html>
+var mod4 = num % 10;
+num = Math.floor(num / 10);
+var mod3 = num % 10;
+numri = Math.floor(numri / 10);
+var shifra2 = numri % 10;
+var shifra1 = Math.floor(numri / 10);
+
+if (shifra4 == shifra1 && shifra2 == shifra3)
+alert("Number palindrome");
+else
+alert("Number not palindrome");

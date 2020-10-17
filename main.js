@@ -1,8 +1,8 @@
 <script>
 function Palindrome()
 {
-    var num = window.prompt("Enter 3 Digit Integer:");
-    num = parseInt(num);
+    var num1 = window.prompt("Enter 3 Digit Integer:");
+    num = parseInt(num1);
     while (num > 999 || num < 100)
     {
      alert("Please Enter a 3 Digit Integer!");
@@ -17,9 +17,9 @@ var mod2 = num % 10;
 var mod1 = Math.floor(num / 10);
 
 if (mod1 == mod3)
-alert("You entered: " + num + "\nNumber is a palindrome");
+alert("You entered: " + num1 + "\nNumber is a palindrome");
 else
-alert("You entered: " + num + "\nNumber not palindrome");
+alert("You entered: " + num1 + "\nNumber not palindrome");
 }
 
 Palindrome()

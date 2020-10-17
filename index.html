@@ -1,56 +1,33 @@
-<!DOCTYPE html>
 <html>
-<head>
-<style>
-  footer {color:red;}
-</style>
+    <head>
+        <script>
+            function Palnum()
+            {
+                var rem, temp, final = 0;
+                var number = Number(document.getElementById("N").value);
 
-<script>
-function palindrome(str) {
-  var re = /[\W_]/g;
-  var lowRegStr = str.toLowerCase().replace(re, '');
-  var reverseStr = lowRegStr.split('').reverse().join(''); 
-  return reverseStr === lowRegStr;
-}
-
-function setCookie(entryname,entryvalue) {
-  document.cookie = entryname + "=" + entryvalue + ";path=/";
-}
-
-function getCookie(entryname) {
-  var val = entryname + "=";
-  var decodedCookie = decodeURIComponent(document.cookie);
-  var ca = decodedCookie.split(';');
-  for(var i = 0; i < ca.length; i++) {
-    var c = ca[i];
-    while (c.charAt(0) == ' ') {
-      c = c.substring(1);
-    }
-    if (c.indexOf(val) == 0) {
-      return c.substring(val.length, c.length);
-    }
-  }
-  return "";
-}
-
-function checkCookie() {
-  var user=getCookie("username");
-  if (user === "") {
-    alert("You must enter a 3 digit integer:","");
-  } else {
-     user = prompt("Please enter a 3 digit integer:","");
-     if (user != "" && user != null) {
-       palindrome(user);
-     }
-  }
-}
-</script>
-</head>
-
-<body onload="checkCookie()"></body>
-
-<footer>
-  <p class="signature">&copy; Tejveer Singh, 2020</p>
-</footer>
-
+                temp = number;
+                while(number>0)
+                {
+                    rem = number%10;
+                    number = parseInt(number/10);
+                    final = final*10+rem;
+                }
+                if(final==temp)
+                {
+                    window.alert("number is Palindrome");
+                }
+                else
+                {
+                    window.alert("number is not palindrome");
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <br>
+        <h1>Chec Whether a number is Palindrome or not</h1>
+        Enter The Number :<input type="text" name="n" id = "N"/>
+   <button onClick="Palnum()">submit</button>
+    </body>
 </html>

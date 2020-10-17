@@ -17,9 +17,9 @@ var mod2 = num % 10;
 var mod1 = Math.floor(num / 10);
 
 if (mod1 == mod3)
-alert("Number is a palindrome");
+alert("You entered: " + num + "\nNumber is a palindrome");
 else
-alert("Number not palindrome");
+alert("You entered: " + num + "\nNumber not palindrome");
 }
 
 Palindrome()
